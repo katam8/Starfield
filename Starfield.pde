@@ -1,4 +1,7 @@
 //your code here
+float c1 = (float)Math.random()*256;
+float c2 = (float)Math.random()*256;
+float c3 = (float)Math.random()*256;
 NormalParticle[] jo = new NormalParticle[1000];
 
 void setup() {
@@ -11,10 +14,15 @@ void setup() {
 
 void draw() {
 	//your code here
+  background(255);
   for(int i = 0; i < jo.length; i++) {
      jo[i].move();
      jo[i].display();
   }
+}
+
+void mousePressed() {
+  redraw();
 }
 
 class NormalParticle {
@@ -31,7 +39,7 @@ class NormalParticle {
     y += Math.sin(angle) / velocity * 2; 
   }
   void display() {
-    fill(0);
+    fill(c1, c2, c3);
     noStroke();
     ellipse((float)x, (float)y, 20, 20);
   }
