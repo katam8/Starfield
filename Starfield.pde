@@ -37,7 +37,7 @@ void setup() {
 
 void draw() {
 	//your code here
-  fill(195, 195, 195, 50);
+  fill(0, 0, 0, 50);
   rect(-1, -1, width + 1, height + 1);
   for(int i = 0; i < jo.length; i++) {
     jo[i].display();
@@ -105,7 +105,7 @@ class JumboParticle extends NormalParticle { //uses inheritance
     y += Math.sin(angle) * (int)velocity; 
   }
   public void display() {
-    fill(a1, a2, a3, 60);
+    fill(a1, a2, a3, 50);
     stroke(a1, a2, a3);
     ellipse((float)x, (float)y, 25, 25);
   }
